@@ -1,0 +1,68 @@
+extend base
+
+block content
+    main
+    section.section__tours
+        .content
+            .content__left
+                .select
+                    .select__item
+                        h3.select__name District
+                        input.select__district(list='district' placeholder='Chose a district')
+                        datalist#district
+                            option(value='Dhaka')
+                            option(value='Tangail')
+                            option(value='Magura')
+                            option(value='Foridpur')
+                            option(value='Bhola')
+                            //- option(value='Dhaka')
+                            //- option(value='Tangail')
+                            //- option(value='Magura')
+                            //- option(value='Foridpur')
+                            //- option(value='Bhola')
+                            //- option(value='Dhaka')
+                            //- option(value='Tangail')
+                            //- option(value='Magura')
+                            //- option(value='Foridpur')
+                            //- option(value='Bhola')
+                            //- option(value='Dhaka')
+                            //- option(value='Tangail')
+                            //- option(value='Magura')
+                            //- option(value='Foridpur')
+                            //- option(value='Bhola')
+                    .select__item
+                        h3.select__name Type
+                        .select__types
+                            .select__box
+                                input.select__box--checkbox(type='checkbox' value="Sea")
+                                span.select__box--type Sea-beach 
+                            .select__box
+                                input.select__box--checkbox(type='checkbox' value="Island")
+                                span.select__box--type Island
+                            .select__box
+                                input.select__box--checkbox(type='checkbox' value="Forest")
+                                span.select__box--type Forest
+                            .select__box
+                                input.select__box--checkbox(type='checkbox' value="Mountain")
+                                span.select__box--type Mountain
+                            .select__box
+                                input.select__box--checkbox(type='checkbox' value="Historical")
+                                span.select__box--type Historical
+                            .select__box
+                                input.select__box--checkbox(type='checkbox' value="Historical")
+                                span.select__box--type Muesum 
+                            .select__box
+                                input.select__box--checkbox(type='checkbox' value="Historical")
+                                span.select__box--type Park 
+                            .select__box
+                                input.select__box--checkbox(type='checkbox' value="Historical")
+                                span.select__box--type Zoo  
+                            .select__box
+                                input.select__box--checkbox(type='checkbox' value="Historical")
+                                span.select__box--type Forest 
+                            .select__box
+                                input.select__box--checkbox(type='checkbox' value="Historical")
+                                span.select__box--type Others 
+                .select__filter Filter
+            .content__right
+                .place

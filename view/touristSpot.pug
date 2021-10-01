@@ -1,0 +1,40 @@
+extend base
+
+block content 
+  .tourist__page
+    header#spot-header
+      img.spot-header__img(src=`/img/places/${touristSpot.imageCover}` alt='boat')
+    .spot-header__box
+      .spot-heading-primary #{touristSpot.name} 
+    section#spot-home-articles.py
+      .spot-container
+        .spot-articles-container
+          article.spot-type
+            .spot-title  Brief Description
+            .spot-title__details #{touristSpot.description}
+          article.spot-type
+            .spot-title How To Go 
+            .spot-title__details #{touristSpot.direction}
+          article.spot-type
+            .spot-title Things To Do
+            .spot-title__details  #{touristSpot.todo}
+    .line
+    section#spot-photos.py-2
+      .spot-photos-container
+        .spot-photo
+          img.spot-pic(src=`/img/places/${touristSpot.images[0]}`, alt=`${touristSpot.name}`)
+        .spot-photo
+          img.spot-pic(src=`/img/places/${touristSpot.images[1]}`, alt=`${touristSpot.name}`)
+        .spot-photo
+          img.spot-pic(src=`/img/places/${touristSpot.images[2]}`, alt=`${touristSpot.name}`)
+    #tip
+      .tip__heading Add Tip
+      .tip__text
+        textarea.tiparea(minlength='30' maxlength='200' cols='70' rows='5' placeholder=' Enter your tips for the user' style='font-size:16px')
+      .tip__submit Add tip
+    section#tips__store
+      .tips__container
+        .view__tips View Tips
+        .tipbox_container 
+
+          

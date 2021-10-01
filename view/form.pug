@@ -1,0 +1,40 @@
+extend base
+
+block content 
+  .form-container
+    form
+      .elem-group
+        .elem-group
+          label(for='tour-selection') Select Your Tour
+          select#tour-selection(name='room_preference' required='')
+            option(value='') Choose a Tour
+            option(value='connecting') Sundarban Exploration
+            option(value='adjoining') The Hill Adventure
+            option(value='adjacent') Trip to Saint Martin
+        label(for='name') Your Name
+        input#name(type='text' name='visitor_name' placeholder='Enter Your Name' pattern='[A-Z\sa-z]{3,20}' required='')
+      .elem-group
+        label(for='email') Your E-mail
+        input#email(type='email' name='visitor_email' placeholder='example@example.com' required='')
+      .elem-group
+        label(for='phone') Your Phone
+        input#phone(type='tel' name='visitor_phone' placeholder='+880' pattern='(\d{3})-?\s?(\d{3})-?\s?(\d{4})' required='')
+      hr
+      .elem-group.inlined
+        label(for='adult') Adults
+        input#adult(type='number' name='total_adults' placeholder='1' min='1' required='')
+      .elem-group.inlined
+        label(for='child') Children
+        input#child(type='number' name='total_children' placeholder='0' min='0' required='')
+      .elem-group
+        label(for='room-selection') Select Room Preference
+        select#room-selection(name='room_preference' required='')
+          option(value='') Choose a Room type
+          option(value='connecting') Single Room
+          option(value='adjoining') Double Room
+          option(value='adjacent') Dorm
+      hr
+      .elem-group
+        label(for='message') Anything Else?
+        textarea#message(name='visitor_message' placeholder='Tell us anything else that might be important.' required='')
+      button(type='submit') Book Tour

@@ -1,0 +1,31 @@
+
+nav.navbar
+  a(href="/")
+    svg.navbar__logo
+      use(xlink:href='/img/icons.svg#sailing-boat-water')
+  ul.navbar__list
+    li.navbar__item
+      a.navbar__link(href='/') Home
+    li.navbar__item
+      a.navbar__link(href='/explore') Explore
+    li.navbar__item
+      a.navbar__link(href='/tours') All Tours
+    li.navbar__item
+      a.navbar__link(href='/tours') Find 
+
+  //- .navbar__item
+  //-   a.navbar__link(href='#') Sign up
+  //-   a.navbar__link(href='#') Log in
+
+  if user
+    ul.navbar__list
+      li.navbar__item.navbar__link.nav__el--logout Log Out
+      li
+        a(href='/me')
+          img.navbar__photo(src=`/img/users/${user.photo}`, alt=`photo of ${user.name}`)
+        
+  else
+    .navbar__item
+      a.navbar__link(href='/signup') Sign up
+      a.navbar__link(href='/login') Log in
+  
